@@ -5,6 +5,7 @@ import {
   GET_TEAMS,
   SET_ACTIVE_PAGE,
   SET_ACTIVE_TEAM,
+  SET_ACTIVE_SUB_PAGE,
 } from '../actionTypes';
 import SettingsService from './settings.service';
 
@@ -122,6 +123,15 @@ export const getTeams = () => async (dispatch) => {
     type: GET_TEAMS,
     payload: {
       data: teams,
+    }
+  });
+}
+
+export const setActiveSubPage = (subPage) => async (dispatch) => {
+  dispatch({
+    type: SET_ACTIVE_SUB_PAGE,
+    payload: {
+      subPage,
     }
   });
 }

@@ -121,7 +121,7 @@ export default function Board({
         </Col>
         {/* Dead col to keep in-line */}
         <Col span={8}></Col>
-        <Col span={16} style={{ display: 'inline-flex', marginTop: 50 }}>
+        <Col span={16} style={{ display: 'inline-flex', marginTop: 50, marginBottom: 10 }}>
           { showLegend && totalNum && (
             <div className="legend">
               <div className="ibm-plex-sans-medium legend-text">

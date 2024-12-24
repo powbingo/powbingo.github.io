@@ -10,6 +10,7 @@ export const USER_LOGOUT = '[Settings] Logout';
 export const GET_TEAMS = '[Settings] Get Teams';
 export const SET_ACTIVE_PAGE = '[Settings] Set Active Page';
 export const SET_ACTIVE_TEAM = '[Settings] Set Active Team';
+export const SET_ACTIVE_SUB_PAGE = '[Settings] Set Active Sub Page';
 
 export const GET_SUBMISSIONS = '[Admin] Get Submissions';
 export const GET_SETTINGS = '[Admin] Get Settings';

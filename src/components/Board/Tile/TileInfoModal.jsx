@@ -30,6 +30,8 @@ export default function TileInfoModal({
     teams.find(team => team.id === activeTeam)?.name || ''
   ), [teams, activeTeam]);
 
+  console.log('teamId', teamId, 'activeTeam', activeTeam);
+
   return (
     <>
       <Modal

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import './Header.css';
-import { setActiveTeam, userLogout } from '../../state/settings/settings.actions';
+import { setActiveSubPage, setActiveTeam, userLogout } from '../../state/settings/settings.actions';
 import useToggle from '../../common/useToggle';
 import LoginModal from '../LoginModal.jsx/LoginModal';
 
@@ -15,6 +15,7 @@ export default function Header() {
   const teams = useSelector(state => state.settings.teams);
   const password = useSelector(state => state.settings.password);
   const teamId = useSelector(state => state.settings.teamId);
+  const activeSubPage = useSelector(state => state.settings.activeSubPage);
 
   const [selectedTeam, setSelectedTeam] = useState();
 
@@ -24,7 +25,9 @@ export default function Header() {
     const sessionTeam = window.sessionStorage.getItem('ironEmpireBingoActiveTeam');
     let relevantTeam = teams[0]?.id;
 
-    if (sessionTeam) relevantTeam = sessionTeam;
+    if (sessionTeam && sessionTeam !== 'null' && sessionTeam !== 'undefined') {
+      relevantTeam = sessionTeam;
+    }
     setSelectedTeam(relevantTeam);
     dispatch(setActiveTeam(relevantTeam))
   }, [teams]);
@@ -32,6 +35,10 @@ export default function Header() {
   const onTeamClick = (teamId) => () => {
     setSelectedTeam(teamId);
     dispatch(setActiveTeam(teamId));
+  };
+
+  const onSubPageClick = (subPage) => () => {
+    dispatch(setActiveSubPage(subPage));
   };
 
   const onLogoutClick = () => {
@@ -68,10 +75,28 @@ export default function Header() {
     );
   }
 
+  console.log('activePage', activePage);
+
   return (
     <Row style={{ marginTop: 32 }}>
       <Col span={16} className="header">
         { activePage === 'viewBoard' && teams.map(team => (<TeamComponent key={team.id} team={team} />)) }
+        { activePage === 'admin' && (
+          <>
+            <div
+              className={`ibm-plex-sans-medium header-button ${activeSubPage === 'submissions' ? 'selected' : ''}`}
+              onClick={onSubPageClick('submissions')}
+            >
+              Submissions
+            </div>
+            <div
+              className={`ibm-plex-sans-medium header-button ${activeSubPage === 'settings' ? 'selected' : ''}`}
+              onClick={onSubPageClick('settings')}
+            >
+              Settings
+            </div>
+          </>
+        )}
       </Col>
       <Col span={8}>
         { (password === 'null' || !password) && (

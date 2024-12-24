@@ -28,11 +28,11 @@ function App() {
 
   return (
     <div className="App" style={{ background: 'black', height: '100%', width: '100%' }}>
-      <Row style={{ height: '100%', width: '100%' }}>
-        <Col span={6} style={{ height: '100%' }}>
+      <Row style={{ height: '100%', width: '100%', background: 'black' }}>
+        <Col span={6} style={{ background: 'black' }}>
           <Sidebar />
         </Col>
-        <Col span={18}>
+        <Col span={18} style={{ background: 'black' }}>
           <MainScreen />
         </Col>
       </Row>

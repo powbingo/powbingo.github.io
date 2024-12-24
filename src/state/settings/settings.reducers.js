@@ -5,6 +5,7 @@ import {
   GET_TEAMS,
   SET_ACTIVE_PAGE,
   SET_ACTIVE_TEAM,
+  SET_ACTIVE_SUB_PAGE,
 } from '../actionTypes';
 
 const initialState = {
@@ -14,6 +15,7 @@ const initialState = {
   teams: [],
   activeTeam: null,
   activePage: 'viewBoard',
+  activeSubPage: 'submissions',
 };
 
 export default function settingsReducer(state = initialState, action) {
@@ -66,7 +68,11 @@ export default function settingsReducer(state = initialState, action) {
         ...state,
         activeTeam: action.payload.team,
       };
-
+    case SET_ACTIVE_SUB_PAGE:
+      return {
+        ...state,
+        activeSubPage: action.payload.subPage,
+      };
     default:
       return state;
   }

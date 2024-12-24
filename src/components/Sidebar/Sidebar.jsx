@@ -58,7 +58,7 @@ export default function Sidebar() {
         </div>
       )}
       { !!relevantTeam && activePage === 'viewBoard' && (
-        <div style={{ position: 'relative', top: 325 }}>
+        <div style={{ position: 'relative', top: 275 }}>
           <div className="sidebar-team ibm-plex-sans-medium">{relevantTeam.name}</div>
           {relevantTeam.members?.map((member) => (
             <div key={member.id} className="sidebar-member ibm-plex-sans-medium">{member}</div>
