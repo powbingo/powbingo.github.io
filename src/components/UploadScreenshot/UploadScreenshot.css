@@ -1,0 +1,111 @@
+.upload-text {
+  font-size: 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-icon {
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.upload-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+
+  label {
+    color: white !important;
+  }
+
+  .ant-select-selector {
+    background: #282833 !important;
+    border-radius: 15px;
+    border: none !important;
+    padding: 25px !important;
+
+    .ant-select-selection-placeholder {
+      color: white;
+    }
+
+    .ant-select-selection-item {
+      color: white;
+    }
+
+    input {
+      color: white;
+    }
+  }
+
+  #uploadScreenshotForm_tile_help .ant-form-item-explain-error {
+    padding-top: 25px;
+  }
+
+  input {
+    color: white !important;
+  }
+
+  input:focus {
+    color: white !important;
+  }
+
+  #uploadScreenshotForm_tile {
+    color: white !important;
+  }
+
+  #uploadScreenshotForm_tile:active {
+    color: white !important;
+  }
+
+  .ant-select-arrow {
+    color: white !important;
+    padding-top: 15px;
+  }
+}
+
+.upload-dragger {
+  .ant-upload-drag {
+    height: 150px !important;
+  }
+
+  .ant-upload-btn {
+    background: #282833 !important;
+  }
+}
+
+.no-team {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+.ant-upload-list-item-name {
+  color: white;
+}
+
+.ant-upload-list-item-actions {
+  .anticon-delete {
+    color: red !important;
+  }
+}
+
+.submit-button {
+  background: #179127;
+  color: white;
+  border-radius: 15px;
+  padding: 25px;
+  width: 450px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.submit-button:hover {
+  background: #0f6d0f;
+  cursor: pointer;
+}

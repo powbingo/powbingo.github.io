@@ -1,0 +1,106 @@
+.header-button {
+  color: #858596;
+  font-family: 'IBM Plex Sans';
+  font-size: 16px;
+  background: transparent;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-button.selected {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.header-button:hover {
+  cursor: pointer;
+  filter: opacity(0.75);
+}
+
+.logout-button {
+  color: white;
+  margin-right: 24px;
+  margin-left: auto;
+  width: fit-content;
+}
+
+.header-icon {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .header-button {
+    margin: 0px 10px;
+  }
+}
+
+.header-menu {
+  width: 100%;
+  background: transparent;
+
+  .ant-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .ant-menu-title-content {
+    font-family: 'IBM Plex Sans';
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .ant-menu-item-selected::after {
+    border-bottom-color: white !important;
+  }
+
+  .ant-menu-submenu-title {
+    color: white;
+  }
+}
+
+.logout-modal {
+  label {
+    color: white !important;
+  }
+
+  .ant-modal-content {
+    background: #4F4F5E;
+  }
+
+  .ant-modal-close {
+    color: white;
+  }
+
+  .ant-modal-title {
+    color: white;
+    background: #4F4F5E;
+  }
+
+  .ant-modal-confirm-title {
+    color: white;
+  }
+
+  .ant-modal-confirm-content {
+    color: white;
+  }
+
+  .ant-btn-default {
+    background: red;
+    color: white;
+    border-color: transparent;
+  }
+
+  .ant-btn-primary {
+    background: #179127;
+    color: white;
+    border-color: transparent;
+  }
+}

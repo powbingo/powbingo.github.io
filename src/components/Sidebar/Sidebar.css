@@ -1,0 +1,46 @@
+.sidebar {
+  width: 100%;
+  margin-top: 24px;
+  margin-left: 20px;
+}
+
+.sidebar-button {
+  color: white;
+  font-family: 'IBM Plex Sans';
+  font-size: 16px;
+  background: transparent;
+  height: 40px;
+  border-radius: 15px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.sidebar-button.selected {
+  background: #4F4F5E;
+}
+
+.sidebar-icon {
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.sidebar-button:hover {
+  cursor: pointer;
+  filter: opacity(0.8);
+}
+
+.sidebar-team {
+  color: #9898AE;
+  font-size: 16px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.sidebar-member {
+  color: white;
+  font-size: 14px;
+  margin-left: 20px;
+  line-height: 21px;
+}

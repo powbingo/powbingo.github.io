@@ -1,0 +1,129 @@
+.legend-text {
+  color: white;
+  display: inline-flex;
+  align-items: center;
+
+  svg {
+    padding-right: 5px;
+  }
+}
+
+.legend {
+  width: 500px;
+  display: inline-flex;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+}
+
+.tile {
+  font-size: 20px;
+  border-radius: 15px;
+  background-color: #282833;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin: 5px;
+  text-align: center;
+  padding: 15px;
+  justify-content: center;
+}
+
+.tile:hover {
+  cursor: pointer;
+  filter: opacity(0.75);
+}
+
+.verified-tile {
+  background-color: #179127;
+}
+
+.submitted-tile {
+  background-color: #16581E;
+}
+
+.rejected-tile {
+  background-color: #DA432C;
+}
+
+.in-progress-tile {
+  background-color: #DA912C;
+}
+
+.tile-info-modal {
+  .ant-modal-content {
+    background: #4F4F5E;
+  }
+
+  .ant-modal-close {
+    color: white;
+  }
+
+  .tile-info-title {
+    color: white;
+    font-size: 16px;
+  }
+
+  .tile-info-sub-title {
+    color: white;
+    font-size: 14px;
+  }
+
+  .tile-info-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    flex-direction: column;
+  }
+
+  .tile-info-primary-button {
+    border-radius: 15px;
+    border: 2px solid white;
+    color: white;
+    font-size: 16px;
+    padding: 15px 5px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .tile-info-primary-button.primary {
+    background: #179127;
+    border-color: #179127;
+  }
+
+  .tile-info-primary-button.disabled {
+    pointer-events: none;
+  }
+
+  .tile-info-button-icon {
+    padding-right: 5px;
+    font-size: 20px;
+  }
+
+  .tile-info-primary-button:hover {
+    cursor: pointer;
+    filter: opacity(0.75);
+  }
+}
+
+.column-header {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.row-header {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+}
+

@@ -1,0 +1,20 @@
+.screenshot-modal {
+  .ant-modal-content {
+    padding: 0;
+    background-color: transparent;
+    width: fit-content;
+    transform: translateX(-25%)
+  }
+
+  .ant-carousel {
+    width: fit-content;
+  }
+
+  .ant-modal-body {
+    width: fit-content;
+  }
+}
+
+.screenshot-image {
+  object-fit: contain;
+}
